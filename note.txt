@@ -1,0 +1,131 @@
+1.什么是git和github
+	git  		工具 团队协作 版本控制，
+	github 		社交网站 开源项目  远程仓库
+
+2.git 和svn的区别
+	1. 集成式和分布式的管理方式
+		什么是分布式和集成式？ -- 中央服务器的版本库和本地版本库  多人协作 github
+	2.
+3.使用git
+    1.不同的系统安装方式不同，
+        window
+            官网下载
+            可视化管理
+            命令行管理（推荐）
+4.注册登录；
+    引导 ：
+        1.下载git
+        2.创建仓库
+                点击+ 创建一个个人仓库
+                      创建一个组织
+        3.克隆仓库
+        4.多人协作
+
+5.创建一个项目
+        1.项目名称
+        2.项目描述
+        3.选择项目公开还是私有
+        4.是否创建项目初始readme文件 我们自己对自己项目的一个描述
+        5.添加系统文件  添加许可文件，
+
+6.下载安装git 下载项目到本地，并修改贡献着
+     使用 git shell 进行管理
+     1.下载项目到本地， git clone {url}
+     2.进入项目目录 设置贡献者
+        name   git config --global  user.name songyoucai
+        email  git config --global  user.email 2944434952@qq.com
+        不赋值 就是查看
+      3.查看所有配置信息
+         git config --list
+
+7.master
+    master是这个项目的主分支的项目名字
+        分支：避免直接修改稳定版本 而复制出来的一份分支，如next 在这个next上面修改，如果没有错误，然后提交合并到主分支
+
+8.git的三个工作区
+    工作区
+    暂存区
+        作为过渡层
+        避免误操作
+        保护工作区和版本区
+        分支处理
+    版本区（库）
+
+    工作区：工作时写的代码
+    暂存区:不能通过工作区 直接把修改后的代码直接扔到版本库的，要先仍到暂存区，才能提交到版本库；
+    版本库：每一个版本 如:master  进行版本控制的，
+
+9.git命令
+    git status      查看工作区和暂存区的工作状态的
+    git add [name]  添加 要添加的文件名
+    git add .       把修改过的文件全部提交到暂存区
+    git commit      把暂存区的文件提交到版本库
+        提交后会弹出一个框 要求填入注释，填入以后 直接保存即可
+        ecs  ：wq 退出编辑
+    git commit -m "这里直接添注释回车就可以提交"
+    git commit -a -m "注释"   先添加到暂存区然后添加注释直接提交到版本库
+    git log         查看提交历史
+        回车可以显示更多，退出，按q键
+
+ 红色的数字。
+    工作区 几个添加 几个修改 和几个删除
+ 绿色的数字
+    暂存区  几个添加 几个修改 和几个删除
+
+9.2 git命令之代码对比 git diff
+
+    git diff 工作区和暂存区的代码对比
+    git diff --cached （--staged） 暂存区和版本库的代码对比
+    git diff [分支名称]  工作区和版本库的代码对比
+        git diff master
+
+9.3 git命令之撤销
+
+    git reset HEAD [file name]       从暂存区把文件撤销到工作区
+    git checkout --[filr name]       把文件从暂存器或者版本去恢复到工作区
+    git commit -m "注释" --amend     撤销上一次提交 并提交这一次
+
+9.4 git命令之删除
+                                        工作区的文件，可以直接右键删除
+    git rm [file name]                  删除暂存区的文件(前提是工作区已经被删除)
+    git rm -f [file name]               直接把暂存区和工作区的文件删除。
+    git rm --cached [file name]         删除暂存区但是不删除工作区的文件
+
+9.5 git命令之恢复
+
+    git checkout commit_id <file.name>
+    git reset --hard commit_id
+             HEAD^
+             HEAD~<num>
+    git reflog
+
+9.6 git命令之远程同步
+    得先查看本地的工具是否和远程仓库连接了，，
+    git remote 查看远程仓库的名字 克隆下来的项目 ，默认项目名字为 origin
+    git remote -v 查看远程仓库的url
+    git push [仓库名] [分支名]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
