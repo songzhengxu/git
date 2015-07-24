@@ -93,17 +93,77 @@
 
 9.5 git命令之恢复
 
-    git checkout commit_id <file.name>
-    git reset --hard commit_id
-             HEAD^
-             HEAD~<num>
-    git reflog
+    git checkout commit_id <file.name>      恢复制定文件
+    git reset --hard commit_id              回滚到制定的版本
+             HEAD^                          回滚到上一个版本
+             HEAD~<num>                     回滚3个版本
+        注意:回滚以后，commit_id也会消失最新的，
+    git reflog                              查看操作历史，
+
+    复制快捷键:选中文本回车键复制
+    粘贴文本:选择文本回车键复制，右键粘贴
 
 9.6 git命令之远程同步
+
     得先查看本地的工具是否和远程仓库连接了，，
     git remote 查看远程仓库的名字 克隆下来的项目 ，默认项目名字为 origin
     git remote -v 查看远程仓库的url
     git push [仓库名] [分支名]
+
+    同步上去以后，刷新就可以看到文件了，上边有个* commit的按钮，就代表我们提交了多少个版本，点击进去就可以看到详细的信息，
+
+10 git多人协作
+
+    在当前项目中右上角有个加号：点击有个弹出层菜单
+        New repository              新的存储库
+        New organization            新组织
+        This repository             这个存储库
+        New issue                   新问题
+        New collaborator            新的伙伴
+
+    邀请新的伙伴。
+
+10.1 git多人协作之冲突解决
+
+    每个人在开发之前(可以是上班之前) 更新一次代码 然后再开发 提交，这样就可以大大的避免冲突
+    当有冲突以后，是提交不了的，要拉取最新的代码，然后对比，
+
+    git fetch  拉取以后 不合并(推荐第一种)
+        Git diff master origin/master //对比代码 查看差别
+        Git merge  orgin/master       //合并代码， 然后手动选择冲突的地方的代码
+
+    git pull   拉取之后 直接合并
+
+
+11. 开源项目的协作
+        开源项目是没有写入权限的，但是可以拉取代码
+        点击fork  新开一个分支，完全克隆一个当前的项目 然后就可以编辑了，，但是修改的是这个分支的代码，，
+        pull request 上传分支
+
+12.git下的分支处理，
+
+    git branch 显示分支
+    git branch [name] 创建分支
+    git checkout [name] 切换到分支
+    git checkout -b [name] 创建分支并切换到
+    git merge [name]  在主分支上合并 分支 前提 没有冲突
+                   有冲突以后，需要手动的修改选择代码，然后再提交
+
+    git branch --merged 查看和master分支合并的分支
+                         作用，分支修改一个bug什么的，合并以后 就可以删除了
+    git branch --no-merged 查看没有合并的分支
+    git branch -d [name] 删除分支，只能是已经和master合并的分支
+    git branch -D [name] 删除分支  强制删除分支，
+    git
+
+13.
+
+
+
+
+
+
+
 
 
 
