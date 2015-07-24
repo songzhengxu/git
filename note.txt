@@ -156,7 +156,40 @@
     git branch -D [name] 删除分支  强制删除分支，
     git
 
-13.
+13.github上的分支操作
+    实操: github的分支创建 删除，
+    github的标签
+        git tag [tag]  创建标签，，不加标签 就是查看标签，
+
+    实操: github下的标签创建
+            github的点赞 关注
+    实操: github下创建组织
+             添加成员，创建仓库 首页怎么进入组织
+             组织和个人仓库的操作方式？
+
+14.github上面创建博客
+             github 上面创建
+                https://pages.github.com/
+                注意格式的正确性
+
+
+
+15. 课程总结
+    1.如何深入--- 实战
+    2.技巧   ---
+        cd ..
+        ls
+        mkdir
+        notepad hello.txt
+        tab键 自动补全
+        config list
+        设置别名
+
+    3.资源
+        http://git.oschina.net/progit/
+        http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+
+
 
 
 
